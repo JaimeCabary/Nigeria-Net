@@ -1,0 +1,290 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h5, p {
+    margin: 0;
+    padding: 0;
+    color: orangered;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header, footer {
+    background: #222;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav a, footer nav a {
+    color: #ff5c00;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover, footer nav a:hover {
+    color: #ffffff;
+}
+
+h1 a {
+    color: #ff5c00;
+    font-size: 2.5rem;
+    text-shadow: 0 0 5px rgba(255, 92, 0, 0.3); /* Reduced intensity */
+}
+
+.hero {
+    background: url('images/20240824_134748.jpg') no-repeat center center/cover;
+    padding: 120px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero {
+    background: url('images/20240824_134748.jpg') no-repeat center center/cover;
+    padding: 140px 20px; /* Increased padding for emphasis */
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    border-radius: 12px; /* Rounded corners for elegance */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Stronger shadow for a "pop" effect */
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Overlay for a darker background effect on the image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.5); /* Semi-transparent overlay */
+    border-radius: 12px;
+    z-index: 1; /* Ensures overlay sits behind text */
+}
+
+/* Title Styles */
+.hero h2 {
+    position: relative;
+    font-size: 3rem; /* Larger font for prominence */
+    color: #ff4500;
+    z-index: 2; /* Places text above overlay */
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8); /* Stronger glow effect */
+    animation: glow 1.5s infinite alternate ease-in-out;
+    margin-bottom: 15px;   
+}
+.hero h2 .highlight {
+    color: #ffffff; /* Make NITDA-FUTO white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 15px rgba(255, 255, 255, 0.6); /* Strong white glow */
+    font-weight: bold; /* Add bold for emphasis */
+    animation: glow-highlight 1.5s infinite alternate; /* Add animation */
+}
+
+/* Paragraph Styles */
+.hero p {
+    position: relative;
+    font-size: 1.3rem; /* Slightly larger font */
+    margin-bottom: 25px;
+    color: #fafafa;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    animation: glow 1.8s infinite alternate;
+}
+
+/* Button Styling */
+.hero button {
+    position: relative;
+    background: linear-gradient(135deg, #ff5c00, #ff3700);
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.2rem; /* Slightly larger text */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 92, 0, 0.7); /* Increased shadow for prominence */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    z-index: 2;
+}
+
+.hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 92, 0, 0.9); /* Stronger hover effect */
+}
+
+/* Glowing Effect Keyframes */
+@keyframes glow {
+    20% {
+        text-shadow: 0 0 10px rgba(255, 9, 0, 0.5), 0 0 5px rgba(255, 9, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 9, 0, 0.9), 0 0 10px rgba(255, 92, 0, 0.9);
+    }
+}
+
+
+button {
+    background: linear-gradient(135deg, #ff5c00, #ff3700);
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(255, 92, 0, 0.4); /* Reduced shadow intensity */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 92, 0, 0.6); /* Reduced hover shadow */
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Reduced intensity */
+}
+
+main, section {
+    padding: 40px;
+    margin-bottom: 40px;
+    background: #292929;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reduced shadow intensity */
+}
+
+section h3 {
+    color: #ff5c00;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(255, 92, 0, 0.5); /* Reduced intensity */
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+footer nav a {
+    margin: 0 15px;
+    color: #ff5c00;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #ffffff;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Center the social media icons */
+    padding: 20px;
+}
+
+.social-logo {
+    font-size: 14px; /* Adjust icon size */
+    margin: 0 10px;  /* Space between icons */
+    color: white; /* Change to orange (#ff5c00) if needed */
+}
+
+.social-media a:hover .social-logo {
+    color: #ff5c00; /* Change icon color on hover */
+}
+
+
+/* General styling for the Featured Speakers section */
+section h3 {
+    color: #ff5c00; /* Makes the section title stand out in orange */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Speaker container styling */
+.speakers-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual speaker card styling */
+.speaker {
+    text-align: center;
+    background-color: #333; /* Dark background for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    max-width: 180px; /* Control card width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Speaker card hover effect */
+.speaker:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 92, 0, 0.6);
+}
+
+/* Speaker image styling */
+.speaker img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+ Speaker name styling 
+.speaker h4 {
+    color: #f9f8f7;  
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+
+
+/* Speaker description styling */
+.speaker p {
+    color: #fcf6f6; /* Light grey for readability */
+    font-size: 0.95rem;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+
+.social-logo {
+    width: 35px;
+    height: auto;
+    margin: 0 12px;
+    filter: drop-shadow(0px 0px 4px rgba(255, 92, 0, 0.3)); /* Reduced shadow intensity */
+    transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+    transform: scale(1.1);
+}
